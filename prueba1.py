@@ -25,13 +25,14 @@ def solicitar_opciones ():
     while True:
         try:
             opcion = int(input("Ingrese una opcion: "))
-            if  opcion > 6:
+            if  opcion < 1 or opcion > 6:
                 print("Debe seleccionar una opcion del 1 al 6")
             else:
+                return opcion
                 break
         except ValueError:
             print("Seleccione una opcion valida")
-            return opcion
+            
     
     #Funcion para la opcion
 def agregar_mascota(lista_m):
